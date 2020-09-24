@@ -1,4 +1,4 @@
-package com.example.prova;
+package com.example.film;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
