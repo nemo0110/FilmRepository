@@ -16,5 +16,6 @@ public interface RepGenere extends JpaRepository<Genere,Long> {
 	
 	@Query(value="SELECT g.descrizione FROM Genere as g", nativeQuery = true)
 	List<Genere> findGen();
-
+	@Query(value="SELECT g.descrizione,a.nomeCognome FROM Genere as g INNER JOIN Attore as a on a.id=1")
+	List<Object> findJoin();
 }

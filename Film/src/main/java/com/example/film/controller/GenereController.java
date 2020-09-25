@@ -25,4 +25,10 @@ public List<Genere> findGeneri() {
 	System.out.println(listaGeneri);
 	return listaGeneri;
 }
+@RequestMapping(value= {"/join"})
+public List<Object> findJoins(){
+	List<Object> listaJoin = repG.findJoin();
+	return listaJoin;
+}
+
 }
