@@ -15,6 +15,6 @@ public interface RepAttore extends JpaRepository<Attore, Long> {
 
 //	@Query("SELECT NomeCognome FROM Attore")
 //	List<Attore> showAttori();
-	@Query(value = "SELECT id, nome_cognome FROM Attore WHERE id = 2", nativeQuery = true)
+	@Query(value = "SELECT Attore.id, nomeCognome, Genere.descrizione FROM Attore JOIN Genere ON Genere.id = 2 ", nativeQuery = true)
 	List<Object> showAttori();
 }
