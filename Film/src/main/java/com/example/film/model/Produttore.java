@@ -6,12 +6,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Attore {
+public class Produttore {
+
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;     
 	
-	private String nomeCognome;
+	private String cognome;
 
 	public Long getId() {
 		return id;
@@ -21,30 +22,18 @@ public class Attore {
 		this.id = id;
 	}
 
-	public String getNomeCognome() {
-		return nomeCognome;
+	public String getCognome() {
+		return cognome;
 	}
 
-	public void setNomeCognome(String nomeCognome) {
-		this.nomeCognome = nomeCognome;
+	public void setCognome(String cognome) {
+		this.cognome = cognome;
 	}
 
-	public Attore(Long id, String nomeCognome) {
-		this.id = id;
-		this.nomeCognome = nomeCognome;
-	}
-
-	public Attore() {
+	public Produttore(Long id, String cognome) {
 		super();
+		this.id = id;
+		this.cognome = cognome;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
