@@ -22,6 +22,21 @@
                 <td colspan ='2' > <%=request.getAttribute("messaggio") == null ? "" : request.getAttribute("messaggio")%></td>
             </tr>
         </form>
+         <form action="/select" method="post">
+         <input type='submit' value='mostra la select'>
+       </form>
+       <table>
+                <c:forEach items="${l}" var="x">
+                    <tr>
+                        <td>${x.nomeCognome}</td>
+                        <td>${x.id}</td>
+                        <td>${x.descrizione}</td>                       
+                    </tr>
+                </c:forEach>    
+            <tr><br>
+                <td colspan ='2' > <%=request.getAttribute("messaggio") == null ? "" : request.getAttribute("messaggio")%></td>
+            </tr>
+        </form>
             
              <br/>
         <a href="registrazione.jsp">Registrazione</a>
